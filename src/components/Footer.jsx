@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="social-icons">
       <a href="https://github.com/Deepak-thecoder" target="_blank"><FaGithub /></a>
       <a href="https://www.linkedin.com/in/deepak-kumar-sahu-9b27ba359/" target="_blank"><FaLinkedin /></a>
-      <a href="https://wa.me/919876543210" target="_blank"><FaWhatsapp /></a>
+      <a href="https://wa.me/916370845863" target="_blank"><FaWhatsapp /></a>
     </div>
   </footer>
 );
