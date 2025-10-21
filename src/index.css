@@ -1,0 +1,199 @@
+:root {
+  --primary: #ff4c60;
+  --secondary: #6a0dad;
+  --bg-color: #0f0f0f;
+  --text-color: #f5f5f5;
+  --card-bg: #1c1c1c;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Links */
+a { text-decoration: none; color: inherit; }
+
+/* Header & Footer */
+header, footer {
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: #111;
+  z-index: 100;
+}
+
+nav a {
+  font-weight: 500;
+  color: #f5f5f5; /* dark mode default */
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover { color: var(--primary); transform: scale(1.1); }
+
+/* Sections */
+section { padding: 6rem 2rem; text-align: center; }
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #ff4c60, #ff1f3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--primary); }
+
+/* Header subtitle */
+header p {
+  color: #f5f5f5; /* dark mode default */
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Skills & Projects containers */
+.skills-container, .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Cards */
+.skill, .project {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill:hover, .project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255,76,96,0.4);
+}
+
+/* Buttons */
+button {
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  background: linear-gradient(90deg, #ff4c60, #ff1f3a);
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: transform 0.3s, background 0.3s;
+}
+button:hover { transform: scale(1.1); }
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.social-icons a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: color 0.3s, transform 0.3s;
+}
+.social-icons a:hover { color: var(--primary); transform: scale(1.2); }
+
+/* ===== Light Mode ===== */
+body.light {
+  --bg-color: #f5f5f5;
+  --text-color: #111;
+  --card-bg: #fff;
+}
+
+/* Body background & text */
+body.light {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navbar links in light mode */
+body.light nav {
+  background-color: #fff;
+}
+body.light nav a {
+  color: #111;
+}
+
+/* Header subtitle in light mode */
+body.light header p {
+  color: #111;
+}
+
+/* Header <h1> gradient in light mode */
+body.light h1 {
+  background: linear-gradient(90deg, #ff4c60, #6a0dad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Footer in light mode */
+body.light footer {
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* Footer social icons in light mode */
+body.light footer .social-icons a {
+  color: #111;
+}
+
+/* Cards and Buttons in light mode */
+body.light .skill, body.light .project {
+  background: var(--card-bg);
+  color: #111;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+body.light button {
+  background: linear-gradient(90deg, #ff4c60, #6a0dad);
+  color: #fff;
+}
+
+/* Hover Effects (both modes) */
+nav a:hover,
+body.light footer .social-icons a:hover,
+button:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-container, .projects-container { flex-direction: column; align-items: center; }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.8rem; }
+}
+/* Profile photo */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
